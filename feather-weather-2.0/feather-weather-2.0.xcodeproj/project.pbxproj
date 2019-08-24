@@ -18,7 +18,15 @@
 		C95011D72310CA6600D739CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C95011D52310CA6600D739CB /* LaunchScreen.storyboard */; };
 		C95011E22310CA6600D739CB /* feather_weather_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95011E12310CA6600D739CB /* feather_weather_2_0Tests.swift */; };
 		C95011ED2310CA6600D739CB /* feather_weather_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95011EC2310CA6600D739CB /* feather_weather_2_0UITests.swift */; };
-		C9E153442310D08F005E8746 /* rain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E153432310D08F005E8746 /* rain.mp4 */; };
+		C9E153522310EA93005E8746 /* 13d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E153492310EA92005E8746 /* 13d.mp4 */; };
+		C9E153532310EA93005E8746 /* 02d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E1534A2310EA92005E8746 /* 02d.mp4 */; };
+		C9E153542310EA93005E8746 /* 50d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E1534B2310EA92005E8746 /* 50d.mp4 */; };
+		C9E153552310EA93005E8746 /* 09d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E1534C2310EA93005E8746 /* 09d.mp4 */; };
+		C9E153562310EA93005E8746 /* 10d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E1534D2310EA93005E8746 /* 10d.mp4 */; };
+		C9E153572310EA93005E8746 /* 01n.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E1534E2310EA93005E8746 /* 01n.mp4 */; };
+		C9E153582310EA93005E8746 /* 01d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E1534F2310EA93005E8746 /* 01d.mp4 */; };
+		C9E153592310EA93005E8746 /* 02n.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E153502310EA93005E8746 /* 02n.mp4 */; };
+		C9E1535A2310EA93005E8746 /* 11d.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E153512310EA93005E8746 /* 11d.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +68,15 @@
 		C95011E82310CA6600D739CB /* feather-weather-2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "feather-weather-2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95011EC2310CA6600D739CB /* feather_weather_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feather_weather_2_0UITests.swift; sourceTree = "<group>"; };
 		C95011EE2310CA6600D739CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9E153432310D08F005E8746 /* rain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = rain.mp4; path = ../../../../../Downloads/rain.mp4; sourceTree = "<group>"; };
+		C9E153492310EA92005E8746 /* 13d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 13d.mp4; path = assets/13d.mp4; sourceTree = SOURCE_ROOT; };
+		C9E1534A2310EA92005E8746 /* 02d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02d.mp4; path = assets/02d.mp4; sourceTree = SOURCE_ROOT; };
+		C9E1534B2310EA92005E8746 /* 50d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 50d.mp4; path = assets/50d.mp4; sourceTree = SOURCE_ROOT; };
+		C9E1534C2310EA93005E8746 /* 09d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 09d.mp4; path = assets/09d.mp4; sourceTree = SOURCE_ROOT; };
+		C9E1534D2310EA93005E8746 /* 10d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 10d.mp4; path = assets/10d.mp4; sourceTree = SOURCE_ROOT; };
+		C9E1534E2310EA93005E8746 /* 01n.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 01n.mp4; path = assets/01n.mp4; sourceTree = SOURCE_ROOT; };
+		C9E1534F2310EA93005E8746 /* 01d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 01d.mp4; path = assets/01d.mp4; sourceTree = SOURCE_ROOT; };
+		C9E153502310EA93005E8746 /* 02n.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02n.mp4; path = assets/02n.mp4; sourceTree = SOURCE_ROOT; };
+		C9E153512310EA93005E8746 /* 11d.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 11d.mp4; path = assets/11d.mp4; sourceTree = SOURCE_ROOT; };
 		D805E79BD089F961480616FF /* Pods_feather_weather_2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_feather_weather_2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C056CB065549FCC8CDB8EE /* Pods-feather-weather-2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-feather-weather-2.0.release.xcconfig"; path = "Target Support Files/Pods-feather-weather-2.0/Pods-feather-weather-2.0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,10 +151,18 @@
 				C95011CC2310CA6500D739CB /* FirstViewController.swift */,
 				C95011CE2310CA6500D739CB /* SecondViewController.swift */,
 				C95011D02310CA6500D739CB /* Main.storyboard */,
-				C9E153432310D08F005E8746 /* rain.mp4 */,
 				C95011D32310CA6600D739CB /* Assets.xcassets */,
 				C95011D52310CA6600D739CB /* LaunchScreen.storyboard */,
 				C95011D82310CA6600D739CB /* Info.plist */,
+				C9E1534F2310EA93005E8746 /* 01d.mp4 */,
+				C9E1534E2310EA93005E8746 /* 01n.mp4 */,
+				C9E1534A2310EA92005E8746 /* 02d.mp4 */,
+				C9E153502310EA93005E8746 /* 02n.mp4 */,
+				C9E1534C2310EA93005E8746 /* 09d.mp4 */,
+				C9E1534D2310EA93005E8746 /* 10d.mp4 */,
+				C9E153512310EA93005E8746 /* 11d.mp4 */,
+				C9E153492310EA92005E8746 /* 13d.mp4 */,
+				C9E1534B2310EA92005E8746 /* 50d.mp4 */,
 			);
 			path = "feather-weather-2.0";
 			sourceTree = "<group>";
@@ -279,9 +303,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E1535A2310EA93005E8746 /* 11d.mp4 in Resources */,
+				C9E153552310EA93005E8746 /* 09d.mp4 in Resources */,
 				C95011D72310CA6600D739CB /* LaunchScreen.storyboard in Resources */,
-				C9E153442310D08F005E8746 /* rain.mp4 in Resources */,
 				C95011D42310CA6600D739CB /* Assets.xcassets in Resources */,
+				C9E153592310EA93005E8746 /* 02n.mp4 in Resources */,
+				C9E153572310EA93005E8746 /* 01n.mp4 in Resources */,
+				C9E153562310EA93005E8746 /* 10d.mp4 in Resources */,
+				C9E153582310EA93005E8746 /* 01d.mp4 in Resources */,
+				C9E153522310EA93005E8746 /* 13d.mp4 in Resources */,
+				C9E153542310EA93005E8746 /* 50d.mp4 in Resources */,
+				C9E153532310EA93005E8746 /* 02d.mp4 in Resources */,
 				C95011D22310CA6500D739CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

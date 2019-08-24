@@ -26,29 +26,19 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     
-    
-    
-    
-    
-    
     var player: AVPlayer?
     
     override func viewDidLoad() {
-        backgroundRain()
+        backgroundRain(filename: "01n.mp4")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         let indicatorSize: CGFloat = 70;
         let indicatorFrame = CGRect(x: (view.frame.width-indicatorSize/2), y: (view.frame.height-indicatorSize/2), width: indicatorSize, height: indicatorSize)
         activityIndicator = NVActivityIndicatorView(frame: indicatorFrame, type: .lineScale, color: UIColor.white, padding: 20.0)
         activityIndicator.backgroundColor = UIColor.black
         view.addSubview(activityIndicator)
-        
         activityIndicator.startAnimating()
-        
-        //        Pop up notification requesting privliages to use location services.
         locationManager.requestWhenInUseAuthorization()
-        
         activityIndicator.startAnimating()
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
@@ -58,8 +48,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func backgroundRain() {
-        let path = Bundle.main.path(forResource: "rain.mp4", ofType: nil)
+    func backgroundRain(filename: String) {
+        let path = Bundle.main.path(forResource: filename, ofType: nil)
         player = AVPlayer(url: URL(fileURLWithPath: path!))
         player!.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
         let playerLayer = AVPlayerLayer(player: player)
@@ -72,9 +62,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         self.player?.isMuted = true
     }
     
+    
     @objc func playerItemDidReachEnd() {
         player!.seek(to: CMTime.zero)
     }
+    
 
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -90,27 +82,108 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
                 let jsonWeather = jsonResponse["weather"].array![0]
                 let jsonTemp = jsonResponse["main"]
                 let iconName = jsonWeather["icon"].stringValue
-                
                 let temp = "\(Int(round(jsonTemp["temp"].doubleValue)))"
                 let condition = jsonWeather["main"].stringValue
                 let weatherTemp = condition + ", " + temp
                 self.weatherTempLabel.text = weatherTemp
                 self.locationLabel.text = jsonResponse["name"].stringValue
                 
+                /*
+                 Open weather map icon codes:
+                */
+                
                 switch iconName {
                     
-                case "n01":
-                    print("n01")
-                
-                
+                case "01d":
+                    print("Clear Sky")
+//                    var player: AVPlayer?
+//                    let filename = "01d.mp4"
+//                    let path = Bundle.main.path(forResource: filename, ofType: nil)
+//                    player = AVPlayer(url: URL(fileURLWithPath: path!))
+//                    player!.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+//                    let playerLayer = AVPlayerLayer(player: player)
+//                    playerLayer.frame = self.view.frame
+//                    playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//                    self.view.layer.insertSublayer(playerLayer, at: 0)
+//                    NotificationCenter.default.addObserver(self, selector: #selector(self.playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
+//                    player!.seek(to: CMTime.zero)
+//                    player!.play()
+//                    self.player?.isMuted = true
+//                    player!.seek(to: CMTime.zero)
+                    
+                case "01n":
+                    print("Clear Sky Night")
+                    
+                case "02d":
+                    print("Few Clouds")
+                    
+                case "02n":
+                    print("Few Clouds Night")
+                    
+                case "03d":
+                    print("scattered clouds")
+                    
+                case "03n":
+                    print("scattered clouds night")
+                    
+                case "04d":
+                    print("broken clouds")
+                    
+                case "04n":
+                    print("broken clouds night")
+                    
+                case "09d":
+                    print("Showering Rainfall")
+                    
+                case "09n":
+                    print("Showering Rainfall Night")
+                    
+                case "10d":
+                    print("rain")
+                    
+                case "10n":
+                    print("rain night")
+                    
+                case "11d":
+                    print("thunderstorm")
+                    
+                case "11n":
+                    print("thunderstorm")
+                    
+                case "13d":
+                    print("snow")
+                    
+                case "13n":
+                    print("snow night")
+                    
+                case "50d":
+                    print("mist")
+                    
+                case "50n":
+                    print("mist night")
                 default:
-                    print("default triggered")
+                    print("Image doesnt match SWITCH case?")
                 }
+
+//                var player: AVPlayer?
+//                var filename = "50d.mp4"
+//                let path = Bundle.main.path(forResource: filename, ofType: nil)
+//                player = AVPlayer(url: URL(fileURLWithPath: path!))
+//                player!.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+//                let playerLayer = AVPlayerLayer(player: player)
+//                playerLayer.frame = self.view.frame
+//                playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//                self.view.layer.insertSublayer(playerLayer, at: 0)
+//                NotificationCenter.default.addObserver(self, selector: #selector(self.playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
+//                player!.seek(to: CMTime.zero)
+//                player!.play()
+//                self.player?.isMuted = true
+//                player!.seek(to: CMTime.zero)
                 
             }
         }
+        
         self.locationManager.stopUpdatingLocation()
         
     }
 }
-
