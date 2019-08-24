@@ -20,6 +20,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var weatherTempLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var windSpeedLabel: UILabel!
+    @IBOutlet weak var windDirectionLabel: UILabel!
     
     var owmApiKey = ""
     var activityIndicator: NVActivityIndicatorView!
@@ -29,7 +33,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     var player: AVPlayer?
     
     override func viewDidLoad() {
-        backgroundRain(filename: "01n.mp4")
+        backgroundRain(filename: "50d.mp4")
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let indicatorSize: CGFloat = 70;
@@ -84,14 +88,22 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
                 let iconName = jsonWeather["icon"].stringValue
                 let temp = "\(Int(round(jsonTemp["temp"].doubleValue)))"
                 let condition = jsonWeather["main"].stringValue
-                let weatherTemp = condition + ", " + temp
+                let weatherTemp = condition + ", " + temp + "℃"
                 self.weatherTempLabel.text = weatherTemp
-                self.locationLabel.text = jsonResponse["name"].stringValue
+                let locationName = jsonResponse["name"].stringValue
+                let country = jsonResponse["sys"]["country"].stringValue
+                self.locationLabel.text = locationName + ", " + country
                 
-                /*
-                 Open weather map icon codes:
-                */
+                let humidity = jsonTemp["humidity"].stringValue
+                self.humidityLabel.text = "Humidity: " + humidity
+                let pressure = jsonTemp["pressure"].stringValue
+                self.pressureLabel.text = "Pressure: " + pressure
                 
+                let windSpeed = jsonResponse["wind"]["speed"].stringValue
+                self.windSpeedLabel.text = "Wind Speed: " + windSpeed
+                let windDeg = jsonResponse["wind"]["deg"].stringValue
+                self.windDirectionLabel.text = "Wind Direction: " + windDeg
+            
                 switch iconName {
                     
                 case "01d":
